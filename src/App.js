@@ -4,7 +4,7 @@ import Navbar from "./component/Navbar";
 import Main from "./component/Main";
 
 function App() {
-  const [mode, setMode] = React.useEffect(false);
+  const [mode, setMode] = React.useState(false);
   function toggleMode() {
     setMode((prevMode) => !prevMode);
   }
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="container">
       <Navbar darkMode={mode} toggleDarkMode={toggleMode} />
-      <Main arkMode={mode} />
+      <Main darkMode={mode} />
     </div>
   );
 }
